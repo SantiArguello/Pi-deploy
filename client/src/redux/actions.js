@@ -22,28 +22,28 @@ export const cleanId = () => {
 
 export const getRecipes = () => {
   return async (dispatch) => {
-    let pedidoApi = await axios.get(`http://localhost:3001/recipes`);
+    let pedidoApi = await axios.get(`/recipes`);
     dispatch({ type: GET_RECIPES, payload: pedidoApi.data });
   };
 };
 
 export const searchName = (name) => {
   return async (dispatch) => {
-    let pedidoApi = await axios.get(`http://localhost:3001/recipes?name=${name}`);
+    let pedidoApi = await axios.get(`/recipes?name=${name}`);
     dispatch({ type: SEARCH_NAME, payload: pedidoApi.data });
   };
 };
 
 export const getDiets = () => {
   return async (dispatch) => {
-    let pedidoApi = await axios.get(`http://localhost:3001/diets`);
+    let pedidoApi = await axios.get(`/diets`);
     dispatch({ type: GET_DIETS, payload: pedidoApi.data });
   };
 };
 
 export const RecipeID = (id) => {
   return async (dispatch) => {
-    let receta = await axios.get(`http://localhost:3001/recipes/${id}`);
+    let receta = await axios.get(`/recipes/${id}`);
     return dispatch({ type: RECIPE_ID, payload: receta.data });
   };
 };
@@ -84,7 +84,7 @@ export const ClearId = () => {
 
 export const postRecipes = (payload) => {
   return async function () {
-    const postRecipe = await axios.post("http://localhost:3001/recipes", payload);
+    const postRecipe = await axios.post("/recipes", payload);
     return postRecipe;
   };
 };

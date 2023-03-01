@@ -5,10 +5,10 @@ import { Landing } from "./components/welcome/LandingPage.jsx";
 import { Home } from "./components/Home/Home.jsx";
 import { CreateRecipe } from "./components/CreateRecipe/CreateRecipe";
 import { RecipeDetail } from "./components/RecipeDetail/RecipeDetail";
-// import axios from "axios";
-// axios.defaults.baseURL = "https://pi-food-production-5420.up.railway.app";
-// axios.defaults.baseURL = "http://localhost:3001/";
-//
+import axios from "axios";
+// axios.defaults.baseURL = 
+ axios.defaults.baseURL = "http://localhost:3001/";
+
 function App() {
   return (
     <div className="App">
